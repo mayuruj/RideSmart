@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/my.css" />
+        <title>RideSmart-Vehicles</title>
+        <script type="text/javascript" src="cordova-2.4.0.js"></script>
+         <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/my.js"></script>
+        <script type="text/javascript">
+        $(function (){
+        	 document.addEventListener("deviceready", deviceready, false);
+             function deviceready(){
+             	$('#addVehicle').hide();$('#deleteVehicle').hide();
+              	$('#btnAdd').click(function(){$('#addVehicle').toggle('slow');});
+              	$('#btnDelete').click(function(){$('#deleteVehicle').toggle('slow');});
+             }
+        	
+        	
+        });
+       
+        </script>
+    </head>
+    <body>
+        <section id="vehicles">
+            <h1 align="center">Vehicles</h1>
+            <div align="center" class="content">        
+            	
+            	 <input type="button" value="add new vehicle" id="btnAdd" />
+            		<div id="addVehicle">
+            		 <h3 align="center">Add Vehicle</h3>
+            		<table>
+            			
+            		
+            			<tr><td><label>Type</label></td>
+            			<td><input type="radio" name="vehicle-type" id="rdtwo_addVehicle" checked="checked">Two Wheeler</input>
+            			<input type="radio" name="vehicle-type" id="rdfour_addVehicle">Four Wheeler</input></td></tr>
+            			
+            			<tr><td><label>Make</label></td>
+            			<td><input type="text" id="txtMake_addVehicle"/></td></tr>
+            		
+            			<tr><td><label>Color</label></td>
+            			<td><input type="text" id="txtColor_addVehicle"/></td></tr>
+            		
+            			<tr><td><label>VehicleNo</label></td>
+            			<td><input type="text" id="txtVehicleNo_addVehicle"/></td></tr>
+            	
+            	
+            		</table>
+            		<div><a href="#">Add</a></div>
+            
+            
+            		</div>
+            		
+            		 <input type="button" value="delete existing vehicle" id="btnDelete" />
+            		<div id="deleteVehicle">
+            		<h3 align="center">Delete Vehicle</h3>
+							<select id="select_deleteVehicle">
+								<option value="Select a Vehicle" selected="selected"></option>
+								<option>A</option>
+							</select>            			
+            		
+            			
+            		<div><a href="#">Delete</a></div>
+            
+            
+            		</div>
+            </div>  
+        </section>
+        
+        
+    </body>
+</html>
